@@ -38,6 +38,46 @@
 
         <section class="mt-8 first:mt-0">
 
+          <!-- To keep in the same column -->
+          <div class="break-inside-avoid">
+
+            <h2 class="mb-4 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal">
+              关于我
+            </h2>
+
+            <section class="mb-4.5 break-inside-avoid">
+              <header>
+                <h3 class="text-lg font-semibold text-gray-700 leading-snugish">
+                  后端开发工程师
+                </h3>
+                <p class="leading-normal text-md text-gray-650">
+                  2016年 至今
+                </p>
+              </header>
+              <p class="mt-2.1 text-md text-gray-700 leading-normal">
+                <span class="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px"><b>·</b></span>
+                5年Spring Cloud微服务体系开发经验
+              </p>
+              <p class="mt-2.1 text-md text-gray-700 leading-normal">
+                <span class="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px"><b>·</b></span>
+                4年可扩展云服务开发经验
+              </p>
+              <p class="mt-2.1 text-md text-gray-700 leading-normal">
+                <span class="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px"><b>·</b></span>
+                3年Docker、Kubernetes开发经验
+              </p>
+              <p class="mt-2.1 text-md text-gray-700 leading-normal">
+                <span class="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px"><b>·</b></span>
+                敢于接手之前没有接触过的领域的任务，善于攻坚
+              </p>
+            </section>
+
+          </div>
+
+        </section>
+
+        <section class="mt-8 first:mt-0">
+
           <section class="mt-8 first:mt-0">
 
             <!-- To keep in the same column -->
@@ -117,7 +157,7 @@
               </li>
               <li class="mt-2.1 text-md text-gray-700 leading-normal">
                 <span class="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px"><b>·</b></span>
-                Kubernetes基础组件日常维护，helm包等部署文件设计、开发。
+                Kubernetes基础组件维护，helm包等部署文件设计开发。
               </li>
             </ul>
           </section>
@@ -151,269 +191,327 @@
             <section class="mb-4.5 break-inside-avoid">
               <header>
                 <h3 class="text-lg font-semibold text-gray-700 leading-snugish">
-                    联想daystAR-混合现实智能平台
-                  </a>
+                    联想daystAR-混合现实智能平台-产品研发
                 </h3>
                 <p class="leading-normal text-md text-gray-650">
-                  2020.02 - 至今 | Java, Kubernetes
+                  https://daystar.lenovo.com
+                </p>
+                <p class="leading-normal text-md text-gray-650">
+                  2020.02 - 至今
                 </p>
               </header>
+
               <p class="mt-2.1 text-md text-gray-700 leading-normal">
-                <b class="font-normal print:font-medium text-gray-700 print:text-black">(1)</b>
-                基于web端实时回放通话视频需求，选型HLS协议方案；设计、开发通用文件服务，引入MinIO(S3)作为存储中间件，实现录像实时回放、断点续传、权限控制等功能；
+                daystAR平台基于AR设备、SLAM物体识别、机器学习AI算法与流媒体技术，提供远程指导协作、AR课程实训和智能巡检识别等功能模块。
               </p>
               <p class="mt-2.1 text-md text-gray-700 leading-normal">
-                <b class="font-normal print:font-medium text-gray-700 print:text-black">(2)</b>
-                为Intel的open-webrtc-toolkit流媒体服务器设计、开发模块化docker镜像及Kubernetes部署方案；并在开发过程中为owt-server提交patch合入主线分支。
+                SaaS版本部署在腾讯云上，也支持PaaS版本的客制化开发部署。定制化版本的主要客户为国家电网、商飞等。
               </p>
             </section>
           </div>
 
           <!-- To keep in the same column -->
           <div class="break-inside-avoid">
+
+            <section class="mb-4.5 break-inside-avoid">
+
+              <p class="mt-2.1 text-md text-gray-700 leading-normal">
+                <span class="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">1.</span>
+                基于web端实时回放通话视频需求，调研、选型HLS协议作为新的视频传输方案，解决原有视频流传输方案的时间轴不准、无法实时回放的问题。为便于使用HLS协议进行视频播放，引入对象存储组件。私有化部署时使用MinIO，公有云部署根据不同云厂商选择AWS S3、阿里云OSS、腾讯云COS等。
+              </p>
+              <p class="mt-2.1 text-md text-gray-700 leading-normal">
+                同时，负责设计、开发通用文件服务，抽象上层功能，兼容上述四种对象存储。实现断点续传、权限控制等功能；
+              </p>
+
+              <p class="mt-2.1 text-md text-gray-700 leading-normal">
+                <span class="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">2.</span>
+                负责牵头进行流媒体中间件性能调研，并参考论文进行视频压缩算法选择。平台中的AR远程协作模块依托于WebRTC组件进行视频通话的实现，由于原先使用的Kurento流媒体中间件已停止维护且性能较差，不支持分布式水平扩展，需要进行重新选型并投入生产环境使用。最终选择使用Intel的open-webrtc-toolkit(https://github.com/open-webrtc-toolkit/owt-server)流媒体中间件。
+              </p>
+              <p class="mt-2.1 text-md text-gray-700 leading-normal">
+                owt-server本身为组件化设计，但官方并未提供分布式镜像与部署方式。负责为owt-server设计、开发模块化docker镜像及Kubernetes部署方案和部署文件；并解决开发过程中遇到的问题为owt-server提交patch合入主线分支。
+              </p>
+            </section>
+            <br>
+
             <section class="mb-4.5 break-inside-avoid">
               <header>
                 <h3 class="text-lg font-semibold text-gray-700 leading-snugish">
-                    Choerodon-基于Kubernetes的开源DevOps平台
-                  </a>
+                    Choerodon-开源DevOps平台-产品研发
                 </h3>
                 <p class="leading-normal text-md text-gray-650">
-                  2018.04 - 2020.02 | Java, Kubernetes
+                  https://github.com/open-hand/choerodon
+                </p>
+                <p class="leading-normal text-md text-gray-650">
+                  2018.04 - 2020.02
                 </p>
               </header>
               <p class="mt-2.1 text-md text-gray-700 leading-normal">
-                <b class="font-normal print:font-medium text-gray-700 print:text-black">(1)</b>
-                负责管理5人制的敏捷开发团队，有大规模敏捷(SAFe)的实践经验；
+                Choerodon是一个针对企业的Agile-DevOps平台，部署在阿里云上以SaaS形式提供服务。包括敏捷管理(类似Jira)、测试管理(类似Zephyr)、代码管理(基于GitLab)和基于Kubernetes的应用部署管理(通过自研Golang-Agent管理其它集群)等功能。
               </p>
               <p class="mt-2.1 text-md text-gray-700 leading-normal">
-                <b class="font-normal print:font-medium text-gray-700 print:text-black">(2)</b>
-                负责Choerodon测试管理模块的业务流程设计、技术架构设计以及后端代码实现(功能类似JIRA中Zephyr插件)；
+                代码在GitHub上开源，收获2000+Stars。同时提供PaaS私有化部署收费版本主要客户有华润置地等，SaaS版本日活3000左右。
+              </p>
+
+              <p class="mt-2.1 text-md text-gray-700 leading-normal">
+                <span class="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">1.</span>
+                带领5人制的敏捷团队进行测试管理模块设计开发，提供测试用例管理、测试计划管理、测试执行、自动化测试和报表展示等功能。
+              </p>
+              <p class="mt-2.1 text-md text-gray-700 leading-normal">
+                自动化测试功能依托Kubernetes进行设计实现，通过定制Mocha、Selenium、TestNG等主流自动化测试框架的Docker镜像实现测试工程代码的运行、测试结果打包回传。后续通过测试结果生成与框架对应的测试报告在Web端进行展示。
+              </p>
+
+              <p class="mt-2.1 text-md text-gray-700 leading-normal">
+                <span class="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">2.</span>
+                  负责Kubernetes集群的安装与维护；同时负责Java、React、GitLabCI等基础镜像维护；YAML部署文件和Helm包模板的设计与开发。
               </p>
             </section>
           </div>
 
-          <!-- To keep in the same column -->
-          <div class="break-inside-avoid">
-            <section class="mb-4.5 break-inside-avoid">
-              <p class="mt-2.1 text-md text-gray-700 leading-normal">
-                <b class="font-normal print:font-medium text-gray-700 print:text-black">(3)</b>
-                设计实现基于Kubernetes的DevOps自动化测试框架，⽀持在网页端控制Mocha、Selenium、TestNG等主流自动化测试应用的运行、测试结果网页端展示等功能。
-              </p>
-            </section>
-          </div>
 
-          <section class="mb-4.5 break-inside-avoid">
-            <header>
-              <h3 class="text-lg font-semibold text-gray-700 leading-snugish">
-                  迅销(优衣库)中国区电商官网
-                </a>
-              </h3>
-              <p class="leading-normal text-md text-gray-650">
-                2016.09 - 2018.04 | Java
-              </p>
-            </header>
 
-            <p class="mt-2.1 text-md text-gray-700 leading-normal">
-              <b class="font-normal print:font-medium text-gray-700 print:text-black">(1)</b>
-              为解决Azure、IDC数据库双端读写造成的数据差异，设计实现基于Kafka的实时数据同步模块；
-            </p>
-            <p class="mt-2.1 text-md text-gray-700 leading-normal">
-              <b class="font-normal print:font-medium text-gray-700 print:text-black">(2)</b>
-              根据开源项目Spring-Boot-Admin进行定制开发。集成Turbine、Ansible等插件，实现微服务实例端点监控，自动伸缩，手动⼀键部署等；
-            </p>
-            <p class="mt-2.1 text-md text-gray-700 leading-normal">
-              <b class="font-normal print:font-medium text-gray-700 print:text-black">(3)</b>
-              根据高并发场景下auth服务负载过高的情况，设计gateway动态校验，业务微服务静态校验JWT的通用组件。
-            </p>
-          </section>
+      </div>
+      <!-- end Column -->
 
+    </div>
+    <!-- end Page -->
+
+    <!-- Page -->
+    <div class="p-6 mx-auto page max-w-2xl print:max-w-letter md:max-w-letter md:h-letter xsm:p-8 sm:p-9 md:p-16 bg-white">
+      <!-- Column -->
+      <div class="md:col-count-2 print:col-count-2 col-gap-md md:h-letter-col print:h-letter-col col-fill-auto">
+      
+        <section class="mb-4.5 break-inside-avoid">
+          <header>
+            <h3 class="text-lg font-semibold text-gray-700 leading-snugish">
+                迅销(优衣库)中国网络旗舰店-后端服务开发
+            </h3>
+            <p class="leading-normal text-md text-gray-650">
+              https://www.uniqlo.cn
+            </p>
+            <p class="leading-normal text-md text-gray-650">
+              2016.09 - 2018.04
+            </p>
+          </header>
+      
+          <p class="mt-2.1 text-md text-gray-700 leading-normal">
+            优衣库自营电子商城，基于Spring Cloud微服务体系开发；采用Azure云与IDC机房并行的混合云架构。
+          </p>
+          <p class="mt-2.1 text-md text-gray-700 leading-normal">
+            官网、小程序等入口均使用这一套后端服务。于2018年初上线，2018年双11大促时，单量已经反超优衣库天猫旗舰店。
+          </p>
+      
+          <p class="mt-2.1 text-md text-gray-700 leading-normal">
+            <span class="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">1.</span>
+            混合云架构中，云端与机房均有数据库。弱一致性数据(购物车、收藏夹等)的操作请求会根据CDN定位进行就近分流、双端读写。
+          </p>
+          <p class="mt-2.1 text-md text-gray-700 leading-normal">
+            为解决Azure、IDC数据库双端读写造成的数据差异，设计实现基于Kafka的实时数据同步模块。通过对表结构增加乐观锁版本号、进行逻辑删除、增加死信消息队列等操作保证数据的最终一致性，并规避乱序消息的冗余操作。
+          </p>
+
+          <p class="mt-2.1 text-md text-gray-700 leading-normal">
+            <span class="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">2.</span>
+            由于项目中微服务数量较多(大促时500左右)，且未引入容器编排等组件。手工维护微服务实例部署、扩展、重启等操作成本过高。
+          </p>
+          <p class="mt-2.1 text-md text-gray-700 leading-normal">
+            为优化服务维护的复杂度，根据开源项目Spring-Boot-Admin进行定制开发。集成Turbine组件实现微服务实例端点监控；集成Ansible调用shell脚本实现根据监控指标自动伸缩实例，手动⼀键部署等功能。
+          </p>
+
+          <p class="mt-2.1 text-md text-gray-700 leading-normal">
+            <span class="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">3.</span>
+            项目初期使用Spring Cloud框架中的标准鉴权体系，Feign调用过程中转发AccessToken，每个微服务都与Auth服务交互进行token校验。导致并发量大的时候Auth服务负载过高，影响系统稳定性。
+          </p>
+          <p class="mt-2.1 text-md text-gray-700 leading-normal">
+            为改善高并发场景下Auth最先崩溃的情况，修改鉴权方式为gateway网关调用Auth服务验证AccessToken，并提取用户信息存入JWT。通过增加拦截器，实现Feign转发过程中将JWT重构到请求Header中，每个微服务仅静态校验JWT签名位。
+          </p>
         </section>
-
-        <section class="mt-8 first:mt-0">
-
-          <!-- To keep in the same column -->
-          <div class="break-inside-avoid">
-
-            <h2 class="mb-4 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal">
-              技能
-            </h2>
-
-            <section class="mb-4.5 break-inside-avoid">
-              <header>
-                <b class="leading-normal text-md text-gray-650">
-                  精通
-                </b>
-              <div class="my-3.2 last:pb-1.5">
-                <ul class="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-1.6">
-                  <li
-                    class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
-                    Java
-                  </li>
-                  <li
-                    class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
-                    Spring Boot
-                  </li>
-                  <li
-                    class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
-                    Spring Cloud
-                  </li>
-                  <li
-                    class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
-                    Mybatis
-                  </li>
-                  <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
-                    Docker
-                  </li>
-                  <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
-                    Kubernetes
-                  </li>
-                  <li
-                    class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
-                    Kafka
-                  </li>
-                  <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
-                    Zookeeper
-                  </li>
-                  <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
-                    MySQL
-                  </li>
-                  <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
-                    Redis
-                  </li>
-                </ul>
-              </div>
-            </section>
-
-          </div>
-
+      
+      </section>
+      
+      <section class="mt-8 first:mt-0">
+      
+        <!-- To keep in the same column -->
+        <div class="break-inside-avoid">
+      
+          <h2 class="mb-4 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal">
+            技能
+          </h2>
+      
           <section class="mb-4.5 break-inside-avoid">
             <header>
               <b class="leading-normal text-md text-gray-650">
-                熟练
+                精通
               </b>
-            </header>
             <div class="my-3.2 last:pb-1.5">
               <ul class="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-1.6">
-                <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
-                  Linux
+                <li
+                  class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
+                  Java
+                </li>
+                <li
+                  class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
+                  Spring Boot
+                </li>
+                <li
+                  class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
+                  Spring Cloud
+                </li>
+                <li
+                  class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
+                  Mybatis
                 </li>
                 <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
-                  Shell
+                  Docker
                 </li>
                 <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
-                  Golang
+                  Kubernetes
+                </li>
+                <li
+                  class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
+                  Kafka
                 </li>
                 <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
-                  MinIO
+                  Zookeeper
                 </li>
                 <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
-                  Intel-OWT
+                  MySQL
                 </li>
                 <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
-                  Nginx
-                </li>
-                <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
-                  Spock
-                </li>
-                <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
-                  Groovy
+                  Redis
                 </li>
               </ul>
             </div>
           </section>
-
+      
+        </div>
+      
+        <section class="mb-4.5 break-inside-avoid">
+          <header>
+            <b class="leading-normal text-md text-gray-650">
+              熟练
+            </b>
+          </header>
+          <div class="my-3.2 last:pb-1.5">
+            <ul class="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-1.6">
+              <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
+                Linux
+              </li>
+              <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
+                Shell
+              </li>
+              <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
+                Golang
+              </li>
+              <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
+                MinIO
+              </li>
+              <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
+                Intel-OWT
+              </li>
+              <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
+                Nginx
+              </li>
+              <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
+                Spock
+              </li>
+              <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
+                Groovy
+              </li>
+            </ul>
+          </div>
+        </section>
+      
+        <section class="mb-4.5 break-inside-avoid">
+          <header>
+            <b class="leading-normal text-md text-gray-650">
+              熟悉
+            </b>
+          </header>
+          <div class="my-3.2 last:pb-1.5">
+            <ul class="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-1.6">
+              <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
+                etcd
+              </li>
+              <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
+                TiDB
+              </li>
+              <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
+                Jenkins
+              </li>
+              <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
+                Ansible
+              </li>
+              <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
+                Jmeter
+              </li>
+              <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
+                Grafana
+              </li>
+              <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
+                Prometheus
+              </li>
+              <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
+                ELK
+              </li>
+            </ul>
+          </div>
+        </section>
+      
+      </section>
+      
+      <section class="mt-8 first:mt-0">
+      
+        <!-- To keep in the same column -->
+        <div class="break-inside-avoid">
+      
+          <h2 class="mb-4 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal">
+            证书
+          </h2>
+      
           <section class="mb-4.5 break-inside-avoid">
-            <header>
-              <b class="leading-normal text-md text-gray-650">
-                熟悉
-              </b>
-            </header>
-            <div class="my-3.2 last:pb-1.5">
-              <ul class="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-1.6">
-                <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
-                  etcd
-                </li>
-                <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
-                  TiDB
-                </li>
-                <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
-                  Jenkins
-                </li>
-                <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
-                  Ansible
-                </li>
-                <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
-                  Jmeter
-                </li>
-                <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
-                  Grafana
-                </li>
-                <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
-                  Prometheus
-                </li>
-                <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
-                  ELK
-                </li>
-              </ul>
-            </div>
+            <ul class="list-inside pr-7">
+              <li class="mt-1.5 leading-normal text-gray-700 text-md">
+                Exin Agile Master
+              </li>
+              <li class="mt-1.5 leading-normal text-gray-700 text-md">
+                IELTS ACADEMIC 5.0
+              </li>
+            </ul>
           </section>
-
-        </section>
-
-        <section class="mt-8 first:mt-0">
-
-          <!-- To keep in the same column -->
-          <div class="break-inside-avoid">
-
-            <h2 class="mb-4 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal">
-              证书
-            </h2>
-
-            <section class="mb-4.5 break-inside-avoid">
-              <ul class="list-inside pr-7">
-                <li class="mt-1.5 leading-normal text-gray-700 text-md">
-                  Exin Agile Master
-                </li>
-                <li class="mt-1.5 leading-normal text-gray-700 text-md">
-                  IELTS ACADEMIC 5.0
-                </li>
-              </ul>
-            </section>
-
-          </div>
-
-        </section>
-
-        <section class="mt-8 first:mt-0">
-
-          <!-- To keep in the same column -->
-          <div class="break-inside-avoid">
-
-            <h2 class="mb-4 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal">
-              联系方式
-            </h2>
-
-            <section class="mb-4.5 break-inside-avoid">
-              <ul class="list-inside pr-7">
-                <li class="mt-1.5 leading-normal text-gray-700 text-md">
-                    github.com/ettwz
-                </li>
-                <li class="mt-1.5 leading-normal text-gray-700 text-md">
-                  上海, 中国
-                </li>
-                <li class="mt-1.5 leading-normal text-gray-700 text-md">
-                  ettwz@hotmail.com
-                </li>
-                <li class="mt-1.5 leading-normal text-gray-700 text-md">
-                  (+86) 16621078794
-                </li>
-              </ul>
-            </section>
-
-          </div>
-
-        </section>
-
+      
+        </div>
+      
+      </section>
+      
+      <section class="mt-8 first:mt-0">
+      
+        <!-- To keep in the same column -->
+        <div class="break-inside-avoid">
+      
+          <h2 class="mb-4 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal">
+            联系方式
+          </h2>
+      
+          <section class="mb-4.5 break-inside-avoid">
+            <ul class="list-inside pr-7">
+              <li class="mt-1.5 leading-normal text-gray-700 text-md">
+                  github.com/ettwz
+              </li>
+              <li class="mt-1.5 leading-normal text-gray-700 text-md">
+                上海, 中国
+              </li>
+              <li class="mt-1.5 leading-normal text-gray-700 text-md">
+                ettwz@hotmail.com
+              </li>
+              <li class="mt-1.5 leading-normal text-gray-700 text-md">
+                (+86) 16621078794
+              </li>
+            </ul>
+          </section>
+      
+        </div>
+      
+      </section>
+      
       </div>
       <!-- end Column -->
 
