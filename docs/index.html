@@ -330,10 +330,12 @@
 
                 <p class="mt-2.1 text-md text-gray-700 leading-normal">
                     <span class="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">1.</span>
+                    The system has two databases located in the Azure and IDC computer rooms respectively as hybrid cloud architecture. 
                     混合云架构中，云端与机房均有数据库。弱一致性数据(购物车、收藏夹等)的操作请求会根据CDN定位进行就近分流、双端读写。
                 </p>
                 <p class="mt-2.1 text-md text-gray-700 leading-normal">
-                    为解决Azure、IDC数据库双端读写造成的数据差异，设计实现基于Kafka的实时数据同步模块。通过对表结构增加乐观锁版本号、进行逻辑删除、增加死信消息队列等操作保证数据的最终一致性，并规避乱序消息的冗余操作。
+                    Design and implement a real-time data synchronization component based on Kafka. This component is aimd to solve data differences caused by double-end read and write between Azure and IDC databases.
+                    Ensuring data consistency through optimistic lock, tombstone and dead-letter queue. Eliminating the impact of redundant data at same time.
                 </p>
 
                 <p class="mt-2.1 text-md text-gray-700 leading-normal">
