@@ -212,7 +212,7 @@
                     <p class="mt-2.1 text-md text-gray-700 leading-normal">
                         通过对接监控设备, 巡检机器人及AI缺陷识别算法. 实现了巡检任务管理执行; 表计数据和缺陷识别; 数字孪生呈现站内多维数据
                         <br>
-                        上海青浦练塘特高压站, 保定...等变电站已投产使用
+                        上海青浦练塘特高压变电站, 保定特高压变电站已投产使用
                     </p>
 
                 </section>
@@ -225,22 +225,33 @@
 
                         <p class="mt-2.1 text-md text-gray-700 leading-normal">
                             <span class="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">1.</span>
-                            担任服务端研发TPM及敏捷教练
+                            担任服务端研发TPM & DevOps Master
                             <br>
-                            制定内部开发流程规范; 设计实现基于GitLab-Runner, Kubernetes, helm, Rancher的CI/CD方案;
+                            设计优化Java端及CI端基础镜像. 针对云原生环境引入Arthas, tini, kaniko等组件;
                             <br>
+                            制定基于GitLab Flow的内部开发流程规范, 并组织相关培训推广会议;
+                            <br>
+                            设计推广基于GitLab-Runner, Kubernetes, helm, Rancher的DevOps方案, 并负责搭建和日常运维.
                         </p>
 
                         <p class="mt-2.1 text-md text-gray-700 leading-normal">
                             <span class="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">2.</span>
-                            对接分析客户需求; 负责自定义字段模块, 报表模块, 告警模块的设计开发
+                            负责解决线上运行时的疑难问题
                             <br>
+                            定位并解决因线上环境操作NVR命令过多, 且大华提供的so库不支持并发操作, 从而引发的JNA报错升级为JVM虚拟机崩溃的问题;
+                            <br>
+                            定位并解决因线上环境NAT复杂, 巡检系统与上级系统和机器人系统的TCP通信过程中, 无法正常检测到Server端关闭导致的系统Bug;
+                            <br>
+                            通过配置交付巡检主机路由表, 解决因交付环境虚拟网络较为复杂, 与上下游系统使用UDP包通信时的监听地址和源地址不匹配, 收不到返回数据包的问题.
                         </p>
-
+                        
                         <p class="mt-2.1 text-md text-gray-700 leading-normal">
                             <span class="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">3.</span>
-                            owt-server本身为组件化设计, 但官方并未提供分布式镜像与部署方式.
+                            对接分析客户需求, 进行业务系统设计开发
                             <br>
+                            负责自定义字段模块, 算法调用模块, 系统指标监控模块的设计及开发;
+                            <br>
+                            负责Web端应用, Java端应用, 及系业务统中使用到的基础组件的Docker镜像维护和Helm包开发.
                         </p>
                     </section>
 
